@@ -1,0 +1,212 @@
+[EDA] 2026-02-28T13:12:26.621933 | === EDA Agent STARTED ===
+[EDA] 2026-02-28T13:12:26.867170 | Data loaded: 25827 rows � 26 cols
+[EDA] 2026-02-28T13:13:54.496855 | === EDA Agent STARTED ===
+[EDA] 2026-02-28T13:13:54.616364 | Data loaded: 25827 rows × 26 cols
+[EDA] 2026-02-28T13:13:56.134348 | EDA report saved to c:\Users\ryanz\Downloads\whardata\outputs\eda_report.md
+[EDA] 2026-02-28T13:13:56.135146 | === EDA Agent COMPLETED ===
+[GAME_AGG] 2026-02-28T13:13:57.572404 | === Game Aggregation Agent STARTED ===
+[GAME_AGG] 2026-02-28T13:13:57.714515 | Loaded 25827 rows
+[GAME_AGG] 2026-02-28T13:13:57.772750 | Game-level table: 1312 games
+[GAME_AGG] 2026-02-28T13:13:58.415192 | game_level.csv saved: 1312 rows
+[GAME_AGG] 2026-02-28T13:13:58.416085 | team_stats.csv saved: 32 teams
+[GAME_AGG] 2026-02-28T13:13:58.416964 | === Game Aggregation Agent COMPLETED ===
+[RANKING] 2026-02-28T13:14:04.622388 | === Ranking Models Agent STARTED ===
+[RANKING] 2026-02-28T13:14:04.637993 | Games: 1312, Teams: 32
+[RANKING] 2026-02-28T13:14:04.638860 | Model 1: Raw Points Standings
+[RANKING] 2026-02-28T13:14:04.652021 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_01_points_standings.csv
+[RANKING] 2026-02-28T13:14:04.653019 | Model 2: xG Differential per 60
+[RANKING] 2026-02-28T13:14:04.659559 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_02_xgd60_es.csv
+[RANKING] 2026-02-28T13:14:04.660454 | Model 3: Pythagorean Expectation
+[RANKING] 2026-02-28T13:14:04.675350 |   Optimal k=1.5, r=0.6833
+[RANKING] 2026-02-28T13:14:04.683202 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_03_pythagorean.csv
+[RANKING] 2026-02-28T13:14:04.684153 | Model 4: Elo Rating System
+[RANKING] 2026-02-28T13:14:04.791858 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_04_elo_ratings.csv
+[RANKING] 2026-02-28T13:14:04.792971 | Model 5: Colley Matrix Method
+[RANKING] 2026-02-28T13:14:04.913796 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_05_colley_matrix.csv
+[RANKING] 2026-02-28T13:14:04.915123 | Model 6: Bradley-Terry Pairwise
+[RANKING] 2026-02-28T13:14:26.514815 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_06_bradley_terry.csv
+[RANKING] 2026-02-28T13:14:26.515931 | Model 7: Composite Weighted Score
+[RANKING] 2026-02-28T13:14:26.531871 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_07_composite_weighted.csv
+[RANKING] 2026-02-28T13:14:26.532959 | Model 8: Logistic Regression Strength
+[RANKING] 2026-02-28T13:14:26.728582 |   Coefficients: h_xgf60=0.1285, h_xga60=-0.1466, a_xgf60=-0.1115, a_xga60=0.1409
+[RANKING] 2026-02-28T13:14:26.739589 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_08_logistic_regression.csv
+[RANKING] 2026-02-28T13:14:26.740757 | Model 9: Random Forest Feature Importance
+[RANKING] 2026-02-28T13:14:27.387244 |   Feature importances: {'home_xgf60': np.float64(0.1373509385366427), 'home_xga60': np.float64(0.13586570366570522), 'away_xgf60': np.float64(0.11577595127393749), 'away_xga60': np.float64(0.11427399030335621), 'home_gsax60': np.float64(0.12707225017470256), 'away_gsax60': np.float64(0.12337128869964593), 'home_pp': np.float64(0.1314413508902426), 'away_pp': np.float64(0.11484852645576729)}
+[RANKING] 2026-02-28T13:14:27.400257 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_09_random_forest.csv
+[RANKING] 2026-02-28T13:14:27.403541 | Model 10: Monte Carlo Simulation
+[RANKING] 2026-02-28T13:14:45.786207 |   Simulation 200/1000
+[RANKING] 2026-02-28T13:15:03.557336 |   Simulation 400/1000
+[RANKING] 2026-02-28T13:15:21.168143 |   Simulation 600/1000
+[RANKING] 2026-02-28T13:15:38.896167 |   Simulation 800/1000
+[RANKING] 2026-02-28T13:15:56.913689 |   Simulation 1000/1000
+[RANKING] 2026-02-28T13:15:56.924443 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_10_monte_carlo.csv
+[RANKING] 2026-02-28T13:15:56.948389 | Consensus rankings saved.
+[RANKING] 2026-02-28T13:15:56.949189 | === Ranking Models Agent COMPLETED ===
+[WIN_PROB] 2026-02-28T13:16:00.519315 | === Win Probability Agent STARTED ===
+[VALID] 2026-02-28T13:16:06.112926 | === Validation Agent STARTED ===
+[VALID] 2026-02-28T13:16:06.128290 | Validating model: points
+[VALID] 2026-02-28T13:16:06.650129 |   τ=0.968  ρ=0.996  top8=0.875  acc=0.582  brier=0.2619  ll=0.7408  cons_ρ=0.869
+[VALID] 2026-02-28T13:16:06.653625 | Validating model: xgd60
+[VALID] 2026-02-28T13:16:07.187875 |   τ=0.310  ρ=0.439  top8=0.625  acc=0.546  brier=0.2854  ll=0.8017  cons_ρ=0.741
+[VALID] 2026-02-28T13:16:07.191025 | Validating model: pythagorean
+[VALID] 2026-02-28T13:16:07.721826 |   τ=0.427  ρ=0.562  top8=0.625  acc=0.553  brier=0.2788  ll=0.7859  cons_ρ=0.836
+[VALID] 2026-02-28T13:16:07.724908 | Validating model: elo
+[VALID] 2026-02-28T13:16:08.247861 |   τ=0.665  ρ=0.833  top8=0.875  acc=0.585  brier=0.2659  ll=0.7519  cons_ρ=0.777
+[VALID] 2026-02-28T13:16:08.250902 | Validating model: colley
+[VALID] 2026-02-28T13:16:08.778809 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T13:16:08.781999 | Validating model: bradley_terry
+[VALID] 2026-02-28T13:16:09.331966 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T13:16:09.335348 | Validating model: composite
+[VALID] 2026-02-28T13:16:09.865120 |   τ=0.685  ρ=0.856  top8=0.750  acc=0.595  brier=0.2653  ll=0.7537  cons_ρ=0.943
+[VALID] 2026-02-28T13:16:09.868258 | Validating model: logistic
+[VALID] 2026-02-28T13:16:10.438173 |   τ=0.057  ρ=0.078  top8=0.250  acc=0.506  brier=0.3129  ll=0.8765  cons_ρ=0.328
+[VALID] 2026-02-28T13:16:10.443631 | Validating model: random_forest
+[VALID] 2026-02-28T13:16:11.008473 |   τ=0.427  ρ=0.606  top8=0.500  acc=0.562  brier=0.2820  ll=0.7952  cons_ρ=0.809
+[VALID] 2026-02-28T13:16:11.011528 | Validating model: monte_carlo
+[VALID] 2026-02-28T13:16:11.544714 |   τ=0.315  ρ=0.440  top8=0.375  acc=0.538  brier=0.2904  ll=0.8155  cons_ρ=0.758
+[VALID] 2026-02-28T13:16:11.549243 | Validation scores saved: 10 models
+[VALID] 2026-02-28T13:16:11.549952 | Validating win probability model (LR)...
+[VALID] 2026-02-28T13:16:12.037876 |   In-sample accuracy: 0.5846
+[VALID] 2026-02-28T13:16:12.039002 |   10-fold CV accuracy: 0.5823 ± 0.0285
+[VALID] 2026-02-28T13:16:12.040040 |   LOTO accuracy: 0.5739
+[VALID] 2026-02-28T13:16:12.040812 |   Baselines: always_home=0.5640, pts=0.5816, xgd=0.5457
+[VALID] 2026-02-28T13:16:12.044722 | Computing model agreement matrix...
+[VALID] 2026-02-28T13:16:22.851892 | Model agreement matrix saved.
+[VALID] 2026-02-28T13:16:22.852681 | Validating disparity methods...
+[VALID] 2026-02-28T13:16:22.859216 |   Disparity method correlation saved.
+[VALID] 2026-02-28T13:16:22.860031 | Original Validation 1: Elo Calibration Curve
+[VALID] 2026-02-28T13:16:23.041395 |   Elo ECE (Expected Calibration Error): 0.0840
+[VALID] 2026-02-28T13:16:23.044845 | Original Validation 2: Score CI Overlap for Adjacent Rankings
+[REPORT] 2026-02-28T13:16:24.461927 | === PDF Report Agent STARTED ===
+[REPORT] 2026-02-28T13:16:24.586088 |   Could not read c:\Users\ryanz\Downloads\whardata\outputs\win_probabilities.csv: [Errno 2] No such file or directory: 'c:\\Users\\ryanz\\Downloads\\whardata\\outputs\\win_probabilities.csv'
+[REPORT] 2026-02-28T13:16:24.593419 |   Could not read c:\Users\ryanz\Downloads\whardata\outputs\disparity\top10_disparity.csv: [Errno 2] No such file or directory: 'c:\\Users\\ryanz\\Downloads\\whardata\\outputs\\disparity\\top10_disparity.csv'
+[REPORT] 2026-02-28T13:16:24.615635 |   Could not read c:\Users\ryanz\Downloads\whardata\outputs\ranking_ci_overlap.csv: [Errno 2] No such file or directory: 'c:\\Users\\ryanz\\Downloads\\whardata\\outputs\\ranking_ci_overlap.csv'
+[REPORT] 2026-02-28T13:16:24.625101 | Markdown report saved: c:\Users\ryanz\Downloads\whardata\outputs\WHL_Competition_Report.md
+[REPORT] 2026-02-28T13:16:24.641559 | Pandoc not available: [WinError 2] The system cannot find the file specified
+[REPORT] 2026-02-28T13:16:24.643775 | reportlab failed: No module named 'reportlab'
+[REPORT] 2026-02-28T13:16:24.644534 | PDF generation failed — Markdown report is available at WHL_Competition_Report.md
+[REPORT] 2026-02-28T13:16:24.645330 | === PDF Report Agent COMPLETED ===
+[WIN_PROB] 2026-02-28T13:17:21.718159 | === Win Probability Agent STARTED ===
+[WIN_PROB] 2026-02-28T13:18:15.714296 | === Win Probability Agent STARTED ===
+[DISPARITY] 2026-02-28T13:18:37.375529 | === Line Disparity Agent STARTED ===
+[DISPARITY] 2026-02-28T13:18:37.489223 | Even-strength rows: 22100
+[DISPARITY] 2026-02-28T13:18:37.496389 | Method 1: Raw xG Ratio
+[DISPARITY] 2026-02-28T13:18:37.923396 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_01_raw_xg_ratio.csv
+[DISPARITY] 2026-02-28T13:18:37.924268 | Method 2: xG per 60 Ratio
+[DISPARITY] 2026-02-28T13:18:38.361650 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_02_xg_per60_ratio.csv
+[DISPARITY] 2026-02-28T13:18:38.362572 | Method 3: Matchup-Adjusted xG per 60
+[DISPARITY] 2026-02-28T13:18:38.375956 |   League avg def xGA/60: 2.2446
+[DISPARITY] 2026-02-28T13:18:41.757535 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_03_matchup_adj_xg60.csv
+[DISPARITY] 2026-02-28T13:18:41.758299 | Method 4: Goals per 60 Ratio
+[DISPARITY] 2026-02-28T13:18:42.172891 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_04_goals_per60_ratio.csv
+[DISPARITY] 2026-02-28T13:18:42.173706 | Method 5: Shots per 60 Ratio
+[DISPARITY] 2026-02-28T13:18:42.605800 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_05_shots_per60_ratio.csv
+[DISPARITY] 2026-02-28T13:18:42.606811 | Method 6: xG Share (Proportion Method)
+[DISPARITY] 2026-02-28T13:18:43.015868 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_06_xg_share_proportion.csv
+[DISPARITY] 2026-02-28T13:18:43.016652 | Method 7: Z-Score Gap
+[DISPARITY] 2026-02-28T13:18:43.492027 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_07_zscore_gap.csv
+[DISPARITY] 2026-02-28T13:18:43.492847 | Method 8: Regression-Based Line Effect
+[DISPARITY] 2026-02-28T13:18:47.656935 |   Regression first_off coefficient: -0.1070
+[DISPARITY] 2026-02-28T13:18:48.143702 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_08_regression_line_effect.csv
+[DISPARITY] 2026-02-28T13:18:48.145522 | Method 9: TOI-Weighted Line Quality
+[DISPARITY] 2026-02-28T13:18:51.537544 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_09_toi_weighted_quality.csv
+[DISPARITY] 2026-02-28T13:18:51.538418 | Method 10: Bootstrap Confidence Interval
+[DISPARITY] 2026-02-28T13:22:04.080385 |   Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\method_10_bootstrap_ci_ratio.csv
+[DISPARITY] 2026-02-28T13:22:04.081148 | Computing consensus ranking...
+[DISPARITY] 2026-02-28T13:22:04.100142 | 
+=== TOP 10 TEAMS BY LINE DISPARITY (Consensus) ===
+[DISPARITY] 2026-02-28T13:22:04.101477 |   Rank  1: saudi_arabia (mean rank=4.10, variance=24.8)
+[DISPARITY] 2026-02-28T13:22:04.102309 |   Rank  2: guatemala (mean rank=4.20, variance=35.5)
+[DISPARITY] 2026-02-28T13:22:04.103129 |   Rank  3: france (mean rank=5.30, variance=1.8)
+[DISPARITY] 2026-02-28T13:22:04.103855 |   Rank  4: usa (mean rank=5.60, variance=84.5)
+[DISPARITY] 2026-02-28T13:22:04.104608 |   Rank  5: iceland (mean rank=6.50, variance=21.8)
+[DISPARITY] 2026-02-28T13:22:04.105388 |   Rank  5: singapore (mean rank=6.50, variance=2.3)
+[DISPARITY] 2026-02-28T13:22:04.106293 |   Rank  7: uae (mean rank=6.70, variance=25.8)
+[DISPARITY] 2026-02-28T13:22:04.107383 |   Rank  8: new_zealand (mean rank=10.40, variance=39.6)
+[DISPARITY] 2026-02-28T13:22:04.108441 |   Rank  9: peru (mean rank=11.80, variance=18.6)
+[DISPARITY] 2026-02-28T13:22:04.109399 |   Rank 10: serbia (mean rank=12.10, variance=27.2)
+[DISPARITY] 2026-02-28T13:22:04.114875 | Consensus disparity saved.
+[DISPARITY] 2026-02-28T13:22:04.115726 | === Line Disparity Agent COMPLETED ===
+[WIN_PROB] 2026-02-28T13:36:47.299951 | === Win Probability Agent STARTED ===
+[VALID] 2026-02-28T13:36:47.615730 | === Validation Agent STARTED ===
+[VALID] 2026-02-28T13:36:47.653161 | Validating model: points
+[VALID] 2026-02-28T13:36:48.582783 |   τ=0.968  ρ=0.996  top8=0.875  acc=0.582  brier=0.2619  ll=0.7408  cons_ρ=0.869
+[VALID] 2026-02-28T13:36:48.605814 | Validating model: xgd60
+[VALID] 2026-02-28T13:36:49.441992 |   τ=0.310  ρ=0.439  top8=0.625  acc=0.546  brier=0.2854  ll=0.8017  cons_ρ=0.741
+[VALID] 2026-02-28T13:36:49.471756 | Validating model: pythagorean
+[VALID] 2026-02-28T13:36:50.316371 |   τ=0.427  ρ=0.562  top8=0.625  acc=0.553  brier=0.2788  ll=0.7859  cons_ρ=0.836
+[VALID] 2026-02-28T13:36:50.336311 | Validating model: elo
+[VALID] 2026-02-28T13:36:51.800301 |   τ=0.665  ρ=0.833  top8=0.875  acc=0.585  brier=0.2659  ll=0.7519  cons_ρ=0.777
+[VALID] 2026-02-28T13:36:51.824297 | Validating model: colley
+[VALID] 2026-02-28T13:36:52.712323 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T13:36:52.733064 | Validating model: bradley_terry
+[VALID] 2026-02-28T13:36:53.544945 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T13:36:53.569137 | Validating model: composite
+[VALID] 2026-02-28T13:36:54.354963 |   τ=0.685  ρ=0.856  top8=0.750  acc=0.595  brier=0.2653  ll=0.7537  cons_ρ=0.943
+[VALID] 2026-02-28T13:36:54.374387 | Validating model: logistic
+[VALID] 2026-02-28T13:36:55.148178 |   τ=0.057  ρ=0.078  top8=0.250  acc=0.506  brier=0.3129  ll=0.8765  cons_ρ=0.328
+[VALID] 2026-02-28T13:36:55.170832 | Validating model: random_forest
+[VALID] 2026-02-28T13:36:55.966426 |   τ=0.427  ρ=0.606  top8=0.500  acc=0.562  brier=0.2820  ll=0.7952  cons_ρ=0.809
+[VALID] 2026-02-28T13:36:55.984869 | Validating model: monte_carlo
+[VALID] 2026-02-28T13:36:56.773336 |   τ=0.315  ρ=0.440  top8=0.375  acc=0.538  brier=0.2904  ll=0.8155  cons_ρ=0.758
+[VALID] 2026-02-28T13:36:56.782237 | Validation scores saved: 10 models
+[VALID] 2026-02-28T13:36:56.783139 | Validating win probability model (LR)...
+[VALID] 2026-02-28T13:36:57.511414 |   In-sample accuracy: 0.5846
+[VALID] 2026-02-28T13:36:57.512557 |   10-fold CV accuracy: 0.5823 ± 0.0285
+[VALID] 2026-02-28T13:36:57.513549 |   LOTO accuracy: 0.5739
+[VALID] 2026-02-28T13:36:57.514542 |   Baselines: always_home=0.5640, pts=0.5816, xgd=0.5457
+[VALID] 2026-02-28T13:36:57.518415 | Computing model agreement matrix...
+[VALID] 2026-02-28T13:37:15.888496 | Model agreement matrix saved.
+[VALID] 2026-02-28T13:37:15.889195 | Validating disparity methods...
+[VALID] 2026-02-28T13:37:16.375889 |   Disparity method correlation saved.
+[VALID] 2026-02-28T13:37:16.417676 |   Disparity rank vs points rank Spearman rho=0.0387 p=0.8335
+[VALID] 2026-02-28T13:37:16.419741 | Original Validation 1: Elo Calibration Curve
+[VALID] 2026-02-28T13:37:16.693133 |   Elo ECE (Expected Calibration Error): 0.0840
+[VALID] 2026-02-28T13:37:16.697035 | Original Validation 2: Score CI Overlap for Adjacent Rankings
+[WIN_PROB] 2026-02-28T13:46:24.398580 | === Win Probability Agent STARTED ===
+[WIN_PROB] 2026-02-28T13:46:43.196325 | === Win Probability Agent STARTED ===
+[VALID] 2026-02-28T14:19:18.956482 | === Validation Agent STARTED ===
+[VALID] 2026-02-28T14:19:19.024072 | Validating model: points
+[VALID] 2026-02-28T14:19:19.596421 |   τ=0.968  ρ=0.996  top8=0.875  acc=0.582  brier=0.2619  ll=0.7408  cons_ρ=0.869
+[VALID] 2026-02-28T14:19:19.597843 |   ERROR validating points: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:19.615498 | Validating model: xgd60
+[VALID] 2026-02-28T14:19:20.130814 |   τ=0.310  ρ=0.439  top8=0.625  acc=0.546  brier=0.2854  ll=0.8017  cons_ρ=0.741
+[VALID] 2026-02-28T14:19:20.131491 |   ERROR validating xgd60: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:20.149183 | Validating model: pythagorean
+[VALID] 2026-02-28T14:19:20.667519 |   τ=0.427  ρ=0.562  top8=0.625  acc=0.553  brier=0.2788  ll=0.7859  cons_ρ=0.836
+[VALID] 2026-02-28T14:19:20.668414 |   ERROR validating pythagorean: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:20.691709 | Validating model: elo
+[VALID] 2026-02-28T14:19:21.237509 |   τ=0.665  ρ=0.833  top8=0.875  acc=0.585  brier=0.2659  ll=0.7519  cons_ρ=0.777
+[VALID] 2026-02-28T14:19:21.238286 |   ERROR validating elo: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:21.258243 | Validating model: colley
+[VALID] 2026-02-28T14:19:21.772925 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T14:19:21.773992 |   ERROR validating colley: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:21.790595 | Validating model: bradley_terry
+[VALID] 2026-02-28T14:19:22.331671 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T14:19:22.332372 |   ERROR validating bradley_terry: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:22.351288 | Validating model: composite
+[VALID] 2026-02-28T14:19:22.869871 |   τ=0.685  ρ=0.856  top8=0.750  acc=0.595  brier=0.2653  ll=0.7537  cons_ρ=0.943
+[VALID] 2026-02-28T14:19:22.870745 |   ERROR validating composite: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:22.889741 | Validating model: logistic
+[VALID] 2026-02-28T14:19:23.403808 |   τ=0.057  ρ=0.078  top8=0.250  acc=0.506  brier=0.3129  ll=0.8765  cons_ρ=0.328
+[VALID] 2026-02-28T14:19:23.404617 |   ERROR validating logistic: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:23.426515 | Validating model: random_forest
+[VALID] 2026-02-28T14:19:23.944810 |   τ=0.427  ρ=0.606  top8=0.500  acc=0.562  brier=0.2820  ll=0.7952  cons_ρ=0.809
+[VALID] 2026-02-28T14:19:23.945631 |   ERROR validating random_forest: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:23.965138 | Validating model: monte_carlo
+[VALID] 2026-02-28T14:19:24.483227 |   τ=0.315  ρ=0.440  top8=0.375  acc=0.538  brier=0.2904  ll=0.8155  cons_ρ=0.758
+[VALID] 2026-02-28T14:19:24.483966 |   ERROR validating monte_carlo: 'charmap' codec can't encode character '\u03c4' in position 2: character maps to <undefined>
+[VALID] 2026-02-28T14:19:24.490668 | Validation scores saved: 10 models
+[VALID] 2026-02-28T14:19:24.491237 | Validating win probability model (LR)...
+[VALID] 2026-02-28T14:19:24.965373 |   In-sample accuracy: 0.5846
+[VALID] 2026-02-28T14:19:24.966258 |   10-fold CV accuracy: 0.5823 ± 0.0285
+[VALID] 2026-02-28T14:19:24.966996 |   LOTO accuracy: 0.5739
+[VALID] 2026-02-28T14:19:24.967519 |   Baselines: always_home=0.5640, pts=0.5816, xgd=0.5457
+[VALID] 2026-02-28T14:19:24.970459 | Computing model agreement matrix...
+[VALID] 2026-02-28T14:19:35.339740 | Model agreement matrix saved.
+[VALID] 2026-02-28T14:19:35.340625 | Validating disparity methods...
+[VALID] 2026-02-28T14:19:35.684576 |   Disparity method correlation saved.
+[VALID] 2026-02-28T14:19:35.712104 |   Disparity rank vs points rank Spearman rho=0.0387 p=0.8335
+[VALID] 2026-02-28T14:19:35.713185 | Original Validation 1: Elo Calibration Curve
+[VALID] 2026-02-28T14:19:35.871285 |   Elo ECE (Expected Calibration Error): 0.0840
+[VALID] 2026-02-28T14:19:35.874377 | Original Validation 2: Score CI Overlap for Adjacent Rankings

@@ -1,0 +1,7 @@
+2026-02-28T13:13:56.403324 | Phase 0: EDA | ✓ OK | 4.0s
+2026-02-28T13:13:58.575901 | Phase 1: Game Aggregation | ✓ OK | 2.2s
+2026-02-28T13:15:57.283710 | Phase 2: All 10 Ranking Models | ✓ OK | 118.7s
+2026-02-28T13:16:00.914629 | Phase 3: Win Probability Models | ✗ FAILED (code 1) | 3.6s
+2026-02-28T13:16:03.399403 | Phase 4: Line Disparity Analysis | ✗ FAILED (code 1) | 2.5s
+2026-02-28T13:16:23.384549 | Phase 5: Validation | ✗ FAILED (code 1) | 20.0s
+2026-02-28T13:16:24.820133 | Phase 6: PDF Report | ✓ OK | 1.4s

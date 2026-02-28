@@ -1,0 +1,13 @@
+home_off_line,away_def_pairing,count
+first_off,second_def,5248
+second_off,first_def,5248
+first_off,first_def,5248
+second_off,second_def,5247
+PP_up,PP_kill_dwn,1305
+PP_kill_dwn,PP_up,1302
+first_off,empty_net_line,566
+second_off,empty_net_line,543
+empty_net_line,second_def,455
+empty_net_line,first_def,449
+PP_kill_dwn,empty_net_line,132
+empty_net_line,PP_kill_dwn,84
