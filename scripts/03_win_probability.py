@@ -17,7 +17,7 @@ LOG_FILE      = r"c:\Users\ryanz\Downloads\whardata\scratch\agent_log.txt"
 OUT_DIR       = r"c:\Users\ryanz\Downloads\whardata\outputs"
 GAME_FILE     = r"c:\Users\ryanz\Downloads\whardata\outputs\game_level.csv"
 TEAM_FILE     = r"c:\Users\ryanz\Downloads\whardata\outputs\team_stats.csv"
-MATCHUPS_FILE = r"c:\Users\ryanz\Downloads\whardata\WHSDSC_Rnd1_matchups - matchups.csv"
+MATCHUPS_FILE = r"c:\Users\ryanz\Downloads\whardata\round1_matchups.csv"
 RANKINGS_DIR  = r"c:\Users\ryanz\Downloads\whardata\outputs\rankings"
 
 def log(msg):

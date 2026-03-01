@@ -210,3 +210,191 @@
 [VALID] 2026-02-28T14:19:35.713185 | Original Validation 1: Elo Calibration Curve
 [VALID] 2026-02-28T14:19:35.871285 |   Elo ECE (Expected Calibration Error): 0.0840
 [VALID] 2026-02-28T14:19:35.874377 | Original Validation 2: Score CI Overlap for Adjacent Rankings
+[WIN_PROB] 2026-02-28T14:37:32.197706 | === Win Probability Agent STARTED ===
+[WIN_PROB] 2026-02-28T14:37:32.246588 | Games: 1312, Teams: 32, Matchups: 16
+[WIN_PROB] 2026-02-28T14:37:32.539825 | Method 1: Logistic Regression
+[WIN_PROB] 2026-02-28T14:37:32.566205 |   In-sample accuracy: 0.5846
+[WIN_PROB] 2026-02-28T14:37:32.567206 | Method 2: Elo-based Probability
+[WIN_PROB] 2026-02-28T14:37:32.572556 | Method 3: Bradley-Terry Probability
+[WIN_PROB] 2026-02-28T14:37:32.578519 | Method 4: Pythagorean Log5
+[WIN_PROB] 2026-02-28T14:37:32.584337 | Method 5: Monte Carlo Matchup Simulation
+[WIN_PROB] 2026-02-28T14:37:32.736891 |   Matchup 1: brazil vs kazakhstan
+[WIN_PROB] 2026-02-28T14:37:32.744794 |   Matchup 2: netherlands vs mongolia
+[WIN_PROB] 2026-02-28T14:37:32.750010 |   Matchup 3: peru vs rwanda
+[WIN_PROB] 2026-02-28T14:37:32.755148 |   Matchup 4: thailand vs oman
+[WIN_PROB] 2026-02-28T14:37:32.760371 |   Matchup 5: pakistan vs germany
+[WIN_PROB] 2026-02-28T14:37:32.765822 |   Matchup 6: india vs usa
+[WIN_PROB] 2026-02-28T14:37:32.770401 |   Matchup 7: panama vs switzerland
+[WIN_PROB] 2026-02-28T14:37:32.775466 |   Matchup 8: iceland vs canada
+[WIN_PROB] 2026-02-28T14:37:32.779902 |   Matchup 9: china vs france
+[WIN_PROB] 2026-02-28T14:37:32.785582 |   Matchup 10: philippines vs morocco
+[WIN_PROB] 2026-02-28T14:37:32.791482 |   Matchup 11: ethiopia vs saudi_arabia
+[WIN_PROB] 2026-02-28T14:37:32.796462 |   Matchup 12: singapore vs new_zealand
+[WIN_PROB] 2026-02-28T14:37:32.802747 |   Matchup 13: guatemala vs south_korea
+[WIN_PROB] 2026-02-28T14:37:32.808853 |   Matchup 14: uk vs mexico
+[WIN_PROB] 2026-02-28T14:37:32.813739 |   Matchup 15: vietnam vs serbia
+[WIN_PROB] 2026-02-28T14:37:32.819450 |   Matchup 16: indonesia vs uae
+[WIN_PROB] 2026-02-28T14:37:32.832746 | Win probabilities saved: c:\Users\ryanz\Downloads\whardata\outputs\win_probabilities.csv
+[WIN_PROB] 2026-02-28T14:37:32.833776 | 
+=== Win Probability Summary ===
+[WIN_PROB] 2026-02-28T14:37:32.835534 |   Game  1: brazil          vs kazakhstan      | LR=0.708 Elo=0.852 BT=0.822 Log5=0.612 MC=0.620 | Ens=0.723 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.837450 |   Game  2: netherlands     vs mongolia        | LR=0.704 Elo=0.847 BT=0.811 Log5=0.693 MC=0.612 | Ens=0.733 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.838643 |   Game  3: peru            vs rwanda          | LR=0.588 Elo=0.818 BT=0.766 Log5=0.598 MC=0.540 | Ens=0.662 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.840058 |   Game  4: thailand        vs oman            | LR=0.658 Elo=0.782 BT=0.694 Log5=0.651 MC=0.591 | Ens=0.675 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.841442 |   Game  5: pakistan        vs germany         | LR=0.700 Elo=0.756 BT=0.677 Log5=0.594 MC=0.582 | Ens=0.662 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.842732 |   Game  6: india           vs usa             | LR=0.596 Elo=0.766 BT=0.688 Log5=0.551 MC=0.487 | Ens=0.618 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.843864 |   Game  7: panama          vs switzerland     | LR=0.561 Elo=0.638 BT=0.642 Log5=0.578 MC=0.601 | Ens=0.604 
+[WIN_PROB] 2026-02-28T14:37:32.844930 |   Game  8: iceland         vs canada          | LR=0.559 Elo=0.758 BT=0.645 Log5=0.459 MC=0.475 | Ens=0.579 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.846046 |   Game  9: china           vs france          | LR=0.639 Elo=0.780 BT=0.648 Log5=0.506 MC=0.478 | Ens=0.611 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.847573 |   Game 10: philippines     vs morocco         | LR=0.511 Elo=0.653 BT=0.605 Log5=0.454 MC=0.428 | Ens=0.530 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.849720 |   Game 11: ethiopia        vs saudi_arabia    | LR=0.552 Elo=0.726 BT=0.578 Log5=0.485 MC=0.543 | Ens=0.577 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.851264 |   Game 12: singapore       vs new_zealand     | LR=0.490 Elo=0.546 BT=0.526 Log5=0.438 MC=0.528 | Ens=0.506 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.853038 |   Game 13: guatemala       vs south_korea     | LR=0.559 Elo=0.682 BT=0.567 Log5=0.522 MC=0.491 | Ens=0.564 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.855470 |   Game 14: uk              vs mexico          | LR=0.486 Elo=0.651 BT=0.543 Log5=0.489 MC=0.522 | Ens=0.538 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.856919 |   Game 15: vietnam         vs serbia          | LR=0.525 Elo=0.567 BT=0.508 Log5=0.413 MC=0.400 | Ens=0.482 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.858290 |   Game 16: indonesia       vs uae             | LR=0.524 Elo=0.684 BT=0.575 Log5=0.514 MC=0.510 | Ens=0.561 ⚠️ DISAGREE
+[WIN_PROB] 2026-02-28T14:37:32.860905 | 
+15 matchups with >10pp model disagreement: ['brazil', 'netherlands', 'peru', 'thailand', 'pakistan', 'india', 'iceland', 'china', 'philippines', 'ethiopia', 'singapore', 'guatemala', 'uk', 'vietnam', 'indonesia']
+[WIN_PROB] 2026-02-28T14:37:32.861860 | === Win Probability Agent COMPLETED ===
+[VALID] 2026-02-28T14:52:45.484194 | === Validation Agent STARTED ===
+[VALID] 2026-02-28T14:52:45.500427 | Validating model: points
+[VALID] 2026-02-28T14:52:46.054051 |   τ=0.968  ρ=0.996  top8=0.875  acc=0.582  brier=0.2619  ll=0.7408  cons_ρ=0.869
+[VALID] 2026-02-28T14:52:46.057529 | Validating model: xgd60
+[VALID] 2026-02-28T14:52:46.592367 |   τ=0.310  ρ=0.439  top8=0.625  acc=0.546  brier=0.2854  ll=0.8017  cons_ρ=0.741
+[VALID] 2026-02-28T14:52:46.595985 | Validating model: pythagorean
+[VALID] 2026-02-28T14:52:47.158742 |   τ=0.427  ρ=0.562  top8=0.625  acc=0.553  brier=0.2788  ll=0.7859  cons_ρ=0.836
+[VALID] 2026-02-28T14:52:47.163203 | Validating model: elo
+[VALID] 2026-02-28T14:52:47.936402 |   τ=0.665  ρ=0.833  top8=0.875  acc=0.585  brier=0.2659  ll=0.7519  cons_ρ=0.777
+[VALID] 2026-02-28T14:52:47.940506 | Validating model: colley
+[VALID] 2026-02-28T14:52:48.653416 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T14:52:48.656678 | Validating model: bradley_terry
+[VALID] 2026-02-28T14:52:49.309460 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T14:52:49.314962 | Validating model: composite
+[VALID] 2026-02-28T14:52:50.039276 |   τ=0.685  ρ=0.856  top8=0.750  acc=0.595  brier=0.2653  ll=0.7537  cons_ρ=0.943
+[VALID] 2026-02-28T14:52:50.043365 | Validating model: logistic
+[VALID] 2026-02-28T14:52:50.709160 |   τ=0.057  ρ=0.078  top8=0.250  acc=0.506  brier=0.3129  ll=0.8765  cons_ρ=0.328
+[VALID] 2026-02-28T14:52:50.713238 | Validating model: random_forest
+[VALID] 2026-02-28T14:52:51.442949 |   τ=0.427  ρ=0.606  top8=0.500  acc=0.562  brier=0.2820  ll=0.7952  cons_ρ=0.809
+[VALID] 2026-02-28T14:52:51.447184 | Validating model: monte_carlo
+[VALID] 2026-02-28T14:52:52.168469 |   τ=0.315  ρ=0.440  top8=0.375  acc=0.538  brier=0.2904  ll=0.8155  cons_ρ=0.758
+[VALID] 2026-02-28T14:52:52.174945 | Validation scores saved: 10 models
+[VALID] 2026-02-28T14:52:52.176036 | Validating win probability model (LR)...
+[VALID] 2026-02-28T14:52:52.820568 |   In-sample accuracy: 0.5846
+[VALID] 2026-02-28T14:52:52.821943 |   10-fold CV accuracy: 0.5823 ± 0.0285
+[VALID] 2026-02-28T14:52:52.823082 |   LOTO accuracy: 0.5739
+[VALID] 2026-02-28T14:52:52.823783 |   Baselines: always_home=0.5640, pts=0.5816, xgd=0.5457
+[VALID] 2026-02-28T14:52:52.826785 | Computing model agreement matrix...
+[VALID] 2026-02-28T14:53:06.638764 | Model agreement matrix saved.
+[VALID] 2026-02-28T14:53:06.639851 | Validating disparity methods...
+[VALID] 2026-02-28T14:53:06.900846 |   Disparity method correlation saved.
+[VALID] 2026-02-28T14:53:06.917439 |   Disparity rank vs points rank Spearman rho=0.0387 p=0.8335
+[VALID] 2026-02-28T14:53:06.918632 | Original Validation 1: Elo Calibration Curve
+[VALID] 2026-02-28T14:53:07.163626 |   Elo ECE (Expected Calibration Error): 0.0840
+[VALID] 2026-02-28T14:53:07.167560 | Original Validation 2: Score CI Overlap for Adjacent Rankings
+[VALID] 2026-02-28T14:53:08.607904 |   Adjacent rank pairs with overlapping CIs: 100.0%
+[VALID] 2026-02-28T14:53:08.612044 | 
+=== All Validation Complete ===
+[VALID] 2026-02-28T14:53:08.616217 | 
+Summary Table:
+[VALID] 2026-02-28T14:53:08.627851 |    model_name  kendall_tau  spearman_rho  top8_hit_rate  brier_score  log_loss  accuracy  consensus_rho
+       points       0.9677        0.9963          0.875       0.2619    0.7408    0.5823         0.8694
+        xgd60       0.3105        0.4388          0.625       0.2854    0.8017    0.5457         0.7412
+  pythagorean       0.4274        0.5616          0.625       0.2788    0.7859    0.5534         0.8356
+          elo       0.6653        0.8325          0.875       0.2659    0.7519    0.5854         0.7775
+       colley       0.8871        0.9666          1.000       0.2605    0.7382    0.5938         0.8859
+bradley_terry       0.8871        0.9666          1.000       0.2605    0.7382    0.5938         0.8859
+    composite       0.6855        0.8563          0.750       0.2653    0.7537    0.5953         0.9431
+     logistic       0.0565        0.0777          0.250       0.3129    0.8765    0.5061         0.3277
+random_forest       0.4274        0.6056          0.500       0.2820    0.7952    0.5625         0.8094
+  monte_carlo       0.3145        0.4402          0.375       0.2904    0.8155    0.5381         0.7580
+[VALID] 2026-02-28T14:53:08.629856 | === Validation Agent COMPLETED ===
+[REPORT] 2026-02-28T14:56:00.323291 | === PDF Report Agent STARTED ===
+[REPORT] 2026-02-28T14:56:00.588608 | Markdown report saved: c:\Users\ryanz\Downloads\whardata\outputs\WHL_Competition_Report.md
+[REPORT] 2026-02-28T14:56:00.602676 | Pandoc not available: [WinError 2] The system cannot find the file specified
+[REPORT] 2026-02-28T14:56:00.604883 | reportlab failed: No module named 'reportlab'
+[REPORT] 2026-02-28T14:56:00.605809 | PDF generation failed — Markdown report is available at WHL_Competition_Report.md
+[REPORT] 2026-02-28T14:56:00.606698 | === PDF Report Agent COMPLETED ===
+[REPORT] 2026-02-28T14:57:31.762465 | === PDF Report Agent STARTED ===
+[REPORT] 2026-02-28T14:57:31.974237 | Markdown report saved: c:\Users\ryanz\Downloads\whardata\outputs\WHL_Competition_Report.md
+[REPORT] 2026-02-28T14:57:31.987814 | Pandoc not available: [WinError 2] The system cannot find the file specified
+[REPORT] 2026-02-28T14:57:32.598001 | PDF generated via reportlab: c:\Users\ryanz\Downloads\whardata\outputs\WHL_Competition_Report.pdf
+[REPORT] 2026-02-28T14:57:32.599031 | === PDF Report Agent COMPLETED ===
+[VISUAL] 2026-02-28T15:10:21.578222 | === Visualization Agent STARTED ===
+[VISUAL] 2026-02-28T15:10:25.413774 | Visualization saved to: c:\Users\ryanz\Downloads\whardata\outputs\plots\Phase1c_LineDisparity_vs_TeamStrength.png
+[VISUAL] 2026-02-28T15:10:27.621175 | Correlation heatmap saved to: c:\Users\ryanz\Downloads\whardata\outputs\plots\Disparity_Method_Correlation.png
+[VISUAL] 2026-02-28T15:10:27.622232 | === Visualization Agent COMPLETED ===
+[ML_AGENT] 2026-02-28T15:47:01.493341 | === ML Refinement Agent STARTED ===
+[ML_AGENT] 2026-02-28T16:02:02.250870 | === ML Refinement Agent STARTED ===
+[ML_AGENT] 2026-02-28T16:02:20.694527 | === ML Refinement Agent STARTED ===
+[ML_AGENT] 2026-02-28T16:02:21.034928 | Tuning Gradient Boosting...
+[ML_AGENT] 2026-02-28T16:02:38.036931 |   Best params: {'learning_rate': 0.05, 'max_depth': 2, 'n_estimators': 50, 'subsample': 1.0}
+[ML_AGENT] 2026-02-28T16:02:39.259764 |   10-CV Acc: 0.5892 | Brier: 0.2371 | LogLoss: 0.6668
+[ML_AGENT] 2026-02-28T16:02:39.382960 | Generating full round-robin rankings using Gradient Boosting...
+[ML_AGENT] 2026-02-28T16:02:39.972080 |   Saved ML ranking to c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_11_gradient_boosting.csv
+[ML_AGENT] 2026-02-28T16:02:39.972810 | Tuning Neural Network (MLP)...
+[ML_AGENT] 2026-02-28T16:03:44.532671 |   Best params: {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (16,)}
+[ML_AGENT] 2026-02-28T16:03:50.119452 |   10-CV Acc: 0.5877 | Brier: 0.2400 | LogLoss: 0.6734
+[ML_AGENT] 2026-02-28T16:03:50.840913 | Generating full round-robin rankings using Neural Network (MLP)...
+[ML_AGENT] 2026-02-28T16:03:51.362578 |   Saved ML ranking to c:\Users\ryanz\Downloads\whardata\outputs\rankings\model_12_neural_network_mlp.csv
+[ML_AGENT] 2026-02-28T16:03:51.365897 | ML evaluation results saved to c:\Users\ryanz\Downloads\whardata\outputs\validation\ml_models_validation.csv
+[ML_AGENT] 2026-02-28T16:03:51.366698 | Invoking 05_validation.py to validate the new ML rankings against ALL 7 metrics...
+[VALID] 2026-02-28T16:03:54.538016 | === Validation Agent STARTED ===
+[VALID] 2026-02-28T16:03:54.556445 | Validating model: points
+[VALID] 2026-02-28T16:03:55.390605 |   τ=0.968  ρ=0.996  top8=0.875  acc=0.582  brier=0.2619  ll=0.7408  cons_ρ=0.869
+[VALID] 2026-02-28T16:03:55.395115 | Validating model: xgd60
+[VALID] 2026-02-28T16:03:56.080351 |   τ=0.310  ρ=0.439  top8=0.625  acc=0.546  brier=0.2854  ll=0.8017  cons_ρ=0.741
+[VALID] 2026-02-28T16:03:56.086084 | Validating model: pythagorean
+[VALID] 2026-02-28T16:03:56.788204 |   τ=0.427  ρ=0.562  top8=0.625  acc=0.553  brier=0.2788  ll=0.7859  cons_ρ=0.836
+[VALID] 2026-02-28T16:03:56.792442 | Validating model: elo
+[VALID] 2026-02-28T16:03:57.487291 |   τ=0.665  ρ=0.833  top8=0.875  acc=0.585  brier=0.2659  ll=0.7519  cons_ρ=0.777
+[VALID] 2026-02-28T16:03:57.491662 | Validating model: colley
+[VALID] 2026-02-28T16:03:58.186555 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T16:03:58.191591 | Validating model: bradley_terry
+[VALID] 2026-02-28T16:03:58.925419 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-02-28T16:03:58.930362 | Validating model: composite
+[VALID] 2026-02-28T16:03:59.628867 |   τ=0.685  ρ=0.856  top8=0.750  acc=0.595  brier=0.2653  ll=0.7537  cons_ρ=0.943
+[VALID] 2026-02-28T16:03:59.633751 | Validating model: logistic
+[VALID] 2026-02-28T16:04:00.333360 |   τ=0.057  ρ=0.078  top8=0.250  acc=0.506  brier=0.3129  ll=0.8765  cons_ρ=0.328
+[VALID] 2026-02-28T16:04:00.338013 | Validating model: random_forest
+[VALID] 2026-02-28T16:04:01.073832 |   τ=0.427  ρ=0.606  top8=0.500  acc=0.562  brier=0.2820  ll=0.7952  cons_ρ=0.809
+[VALID] 2026-02-28T16:04:01.077790 | Validating model: monte_carlo
+[VALID] 2026-02-28T16:04:01.763479 |   τ=0.315  ρ=0.440  top8=0.375  acc=0.538  brier=0.2904  ll=0.8155  cons_ρ=0.758
+[VALID] 2026-02-28T16:04:01.769864 | Validation scores saved: 10 models
+[VALID] 2026-02-28T16:04:01.771003 | Validating win probability model (LR)...
+[VALID] 2026-02-28T16:04:02.491758 |   In-sample accuracy: 0.5846
+[VALID] 2026-02-28T16:04:02.493204 |   10-fold CV accuracy: 0.5823 ± 0.0285
+[VALID] 2026-02-28T16:04:02.494352 |   LOTO accuracy: 0.5739
+[VALID] 2026-02-28T16:04:02.495290 |   Baselines: always_home=0.5640, pts=0.5816, xgd=0.5457
+[VALID] 2026-02-28T16:04:02.499817 | Computing model agreement matrix...
+[VALID] 2026-02-28T16:04:23.808171 | Model agreement matrix saved.
+[VALID] 2026-02-28T16:04:23.809215 | Validating disparity methods...
+[VALID] 2026-02-28T16:04:24.084978 |   Disparity method correlation saved.
+[VALID] 2026-02-28T16:04:24.104867 |   Disparity rank vs points rank Spearman rho=0.0387 p=0.8335
+[VALID] 2026-02-28T16:04:24.106773 | Original Validation 1: Elo Calibration Curve
+[VALID] 2026-02-28T16:04:24.370637 |   Elo ECE (Expected Calibration Error): 0.0840
+[VALID] 2026-02-28T16:04:24.375176 | Original Validation 2: Score CI Overlap for Adjacent Rankings
+[VALID] 2026-02-28T16:04:26.220820 |   Adjacent rank pairs with overlapping CIs: 100.0%
+[VALID] 2026-02-28T16:04:26.227985 | 
+=== All Validation Complete ===
+[VALID] 2026-02-28T16:04:26.232017 | 
+Summary Table:
+[VALID] 2026-02-28T16:04:26.244923 |    model_name  kendall_tau  spearman_rho  top8_hit_rate  brier_score  log_loss  accuracy  consensus_rho
+       points       0.9677        0.9963          0.875       0.2619    0.7408    0.5823         0.8694
+        xgd60       0.3105        0.4388          0.625       0.2854    0.8017    0.5457         0.7412
+  pythagorean       0.4274        0.5616          0.625       0.2788    0.7859    0.5534         0.8356
+          elo       0.6653        0.8325          0.875       0.2659    0.7519    0.5854         0.7775
+       colley       0.8871        0.9666          1.000       0.2605    0.7382    0.5938         0.8859
+bradley_terry       0.8871        0.9666          1.000       0.2605    0.7382    0.5938         0.8859
+    composite       0.6855        0.8563          0.750       0.2653    0.7537    0.5953         0.9431
+     logistic       0.0565        0.0777          0.250       0.3129    0.8765    0.5061         0.3277
+random_forest       0.4274        0.6056          0.500       0.2820    0.7952    0.5625         0.8094
+  monte_carlo       0.3145        0.4402          0.375       0.2904    0.8155    0.5381         0.7580
+[VALID] 2026-02-28T16:04:26.247841 | === Validation Agent COMPLETED ===
+[ML_AGENT] 2026-02-28T16:04:26.617604 | Moved new validation results to c:\Users\ryanz\Downloads\whardata\outputs\validation\validation_scores_set2.csv
+[ML_AGENT] 2026-02-28T16:04:26.618873 | === ML Refinement Agent COMPLETED ===
+[REPORT2] 2026-02-28T16:04:36.219530 | === Report 2 Agent STARTED ===
+[REPORT2] 2026-02-28T16:04:36.265386 | Report 2 generated at: c:\Users\ryanz\Downloads\whardata\outputs\reports\Report_2_ML_Refinement.md
+[REPORT2] 2026-02-28T16:04:36.266420 | === Report 2 Agent COMPLETED ===
+[REPORT2] 2026-02-28T16:05:19.705370 | === Report 2 Agent STARTED ===
+[REPORT2] 2026-02-28T16:05:19.748173 | Report 2 generated at: c:\Users\ryanz\Downloads\whardata\outputs\reports\Report_2_ML_Refinement.md
+[REPORT2] 2026-02-28T16:05:19.748978 | === Report 2 Agent COMPLETED ===

@@ -1,0 +1,2 @@
+in_sample_accuracy,in_sample_brier,in_sample_logloss,cv10_acc_mean,cv10_acc_std,cv10_brier_mean,cv10_logloss_mean,loto_acc_mean,loto_acc_std,baseline_always_home,baseline_higher_pts,baseline_higher_xgd
+0.5846,0.2407,0.6744,0.5823,0.0285,0.242,0.677,0.5739,0.052,0.564,0.5816,0.5457

@@ -292,8 +292,8 @@ def original_validation_2(game_df, team_df):
         a_toi  = a['total_toi'] if 'total_toi' in a.columns else pd.Series([3600]*len(a))
         
         game_xgd = pd.concat([
-            (h_xgdf.values - h_xgda.values),
-            (a_xgdf.values - a_xgda.values)
+            (h_xgdf - h_xgda),
+            (a_xgdf - a_xgda)
         ])
         
         boots = []
