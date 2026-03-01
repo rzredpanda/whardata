@@ -30,7 +30,7 @@ def safe_read(path, **kwargs):
 
 def fmt_table(df, max_rows=35):
     """Format a DataFrame as a markdown table."""
-    return df.head(max_rows).to_markdown(index=False) if not df.empty else "_No data available._"
+    return df.head(max_rows).round(3).to_markdown(index=False) if not df.empty else "_No data available._"
 
 def main():
     log("=== PDF Report Agent STARTED ===")

@@ -26,7 +26,7 @@ def safe_read(path):
     return pd.DataFrame()
 
 def fmt_table(df, max_rows=35):
-    return df.head(max_rows).to_markdown(index=False) if not df.empty else "_No data available._"
+    return df.head(max_rows).round(3).to_markdown(index=False) if not df.empty else "_No data available._"
 
 def main():
     log("=== Report 2 Agent STARTED ===")

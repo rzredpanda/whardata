@@ -1,5 +1,5 @@
 # WHL 2026 — Phase 7: Machine Learning Refinement Report
-**Generated:** 2026-02-28 16:05
+**Generated:** 2026-02-28 16:42
 
 ---
 
@@ -8,10 +8,10 @@ We introduced advanced, hyperparameter-tuned machine learning models (Gradient B
 
 ## 1. Raw Win Probability Improvements (10-Fold CV)
 The table below shows the 10-fold cross-validated performance of the tuned ML classifiers on the core binary task (predicting the home team win).
-| model                |   accuracy |    brier |   log_loss |
-|:---------------------|-----------:|---------:|-----------:|
-| Gradient Boosting    |   0.589163 | 0.237133 |   0.666803 |
-| Neural Network (MLP) |   0.587676 | 0.240032 |   0.673396 |
+| model                |   accuracy |   brier |   log_loss |
+|:---------------------|-----------:|--------:|-----------:|
+| Gradient Boosting    |      0.589 |   0.237 |      0.667 |
+| Neural Network (MLP) |      0.588 |   0.24  |      0.673 |
 
 ## 2. Validation Metrics: Set 1 (Original) vs Set 2 (ML Refined)
 All underlying ranking models (both original and the new ML derivations) were scored against the ground truth points rank utilizing exactly the same 7 validation metrics.
@@ -19,18 +19,18 @@ All underlying ranking models (both original and the new ML derivations) were sc
 ### 2.1 Top Models from Set 1 (Phase 1 Baseline)
 | model_name    |   kendall_tau |   spearman_rho |   accuracy |   brier_score |
 |:--------------|--------------:|---------------:|-----------:|--------------:|
-| composite     |        0.6855 |         0.8563 |     0.5953 |        0.2653 |
-| bradley_terry |        0.8871 |         0.9666 |     0.5938 |        0.2605 |
-| colley        |        0.8871 |         0.9666 |     0.5938 |        0.2605 |
+| composite     |         0.686 |          0.856 |      0.595 |         0.265 |
+| bradley_terry |         0.887 |          0.967 |      0.594 |         0.26  |
+| colley        |         0.887 |          0.967 |      0.594 |         0.26  |
 
 ### 2.2 Top Models from Set 2 (After ML Tuning)
 | model_name    |   kendall_tau |   spearman_rho |   accuracy |   brier_score |
 |:--------------|--------------:|---------------:|-----------:|--------------:|
-| composite     |        0.6855 |         0.8563 |     0.5953 |        0.2653 |
-| bradley_terry |        0.8871 |         0.9666 |     0.5938 |        0.2605 |
-| colley        |        0.8871 |         0.9666 |     0.5938 |        0.2605 |
-| elo           |        0.6653 |         0.8325 |     0.5854 |        0.2659 |
-| points        |        0.9677 |         0.9963 |     0.5823 |        0.2619 |
+| composite     |         0.686 |          0.856 |      0.595 |         0.265 |
+| bradley_terry |         0.887 |          0.967 |      0.594 |         0.26  |
+| colley        |         0.887 |          0.967 |      0.594 |         0.26  |
+| elo           |         0.665 |          0.832 |      0.585 |         0.266 |
+| points        |         0.968 |          0.996 |      0.582 |         0.262 |
 
 **Net Improvement in Rank Accuracy:** The best model improved from **59.530%** to **59.530%** (an uplift of 0.000%).
 

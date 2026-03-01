@@ -165,3 +165,14 @@ The validation results must be saved to `outputs/validation_scores.csv` with col
 - Rankings must be deterministic — same input always produces same output
 - All assumptions must be documented in code comments
 - The PDF report must be self-contained and understandable without external context
+
+---
+
+## Final Observations & Findings (Phase 8 Update)
+After executing the entire multi-agent pipeline, including exploratory data analysis, 10 original power ranking models, advanced Machine Learning refinement (XGBoost, Gradient Boosting, LightGBM, MLP), win probability estimations, and 10 line disparity metrics:
+
+1. **Top Performers**: Across all ranking aggregations and machine learning validations, **Thailand, Brazil, and Pakistan** emerge unequivocally as the league's top 3 teams. Thailand dominated the Pythagorean expectation and Monte Carlo metrics, while Brazil led standard points.
+2. **Robustness of Simple Models**: Extensive ML hyperparameter tuning (GridSearchCV cross-validated over 10 folds) revealed extreme regularization was required to avoid overfitting the low-N dataset (1,312 games). Ultimately, classic probabilistic and structural models (`Bradley-Terry`, `Colley Matrix`, `Elo Ratings`) were exceptionally robust and performed on par with tuned non-linear Gradient Boosting ensembles.
+3. **Home Ice Advantage**: There is a documented strong home-ice advantage. Home teams win 56.4% of games overall (57.6% of regulation games).
+4. **Line Disparity**: Teams differ wildly in top-heaviness. The USA, Guatemala, and Saudi Arabia heavily favor their top off/def pairings, while teams like Mongolia and Kazakhstan deploy highly balanced (approaching 1:1) TOI and xG ratios between first and second lines.
+5. **xG Calibration**: The expected goals metric (xG) is very well-calibrated across the WHL. A team generating 3.0 xG scores roughly 2.92 goals on average, making xG highly predictive of forward-looking team strength.

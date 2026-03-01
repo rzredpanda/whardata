@@ -62,7 +62,7 @@ def main():
     for c in cats:
         vc = df[c].value_counts()
         rline(f"### {c}")
-        rline(vc.to_string())
+        rline(vc.to_markdown())
         vc.to_csv(os.path.join(EDA_DIR, f"vc_{c}.csv"))
         rline()
 
@@ -75,7 +75,7 @@ def main():
             'away_penalties_committed','away_penalty_minutes']
     num_summary = df[nums].describe().T
     num_summary['skew'] = df[nums].skew()
-    rline(num_summary.to_string())
+    rline(num_summary.to_markdown())
     num_summary.to_csv(os.path.join(EDA_DIR, "numeric_summary.csv"))
     rline()
 
@@ -110,7 +110,7 @@ def main():
     rline(f"OT/SO home win rate: {ot['home_win'].mean():.4f} (n={len(ot)})")
     rline(f"Goal margin distribution:")
     gd = game_agg['goal_diff'].value_counts().sort_index()
-    rline(gd.to_string())
+    rline(gd.to_markdown())
     gd.to_csv(os.path.join(EDA_DIR, "goal_diff_dist.csv"))
     rline()
 
@@ -133,7 +133,7 @@ def main():
     ], ignore_index=True)
     all_df['xg_bin'] = pd.cut(all_df['xg'], bins=np.arange(0,3.5,0.25))
     cal = all_df.groupby('xg_bin',observed=True).agg(mean_xg=('xg','mean'), mean_goals=('goals','mean'), n=('goals','count')).reset_index()
-    rline(cal.to_string())
+    rline(cal.to_markdown())
     cal.to_csv(os.path.join(EDA_DIR, "xg_calibration.csv"), index=False)
     rline()
 
@@ -186,9 +186,9 @@ def main():
     
     rline(f"Goalies analyzed: {len(goalie_all)}")
     rline("Top 5 GSAx:")
-    rline(goalie_all.head(5)[['goalie','xga','ga','gsax','gsax_per60']].to_string())
+    rline(goalie_all.head(5)[['goalie','xga','ga','gsax','gsax_per60']].to_markdown())
     rline("Bottom 5 GSAx:")
-    rline(goalie_all.tail(5)[['goalie','xga','ga','gsax','gsax_per60']].to_string())
+    rline(goalie_all.tail(5)[['goalie','xga','ga','gsax','gsax_per60']].to_markdown())
     goalie_all.to_csv(os.path.join(EDA_DIR, "goalie_gsax.csv"), index=False)
     rline()
 
@@ -237,9 +237,9 @@ def main():
     half_df = pd.DataFrame(half_summary)
     half_df['trend'] = half_df['winpct_h2'] - half_df['winpct_h1']
     rline("Top 5 improvers (second half win% - first half win%):")
-    rline(half_df.nlargest(5,'trend')[['team','winpct_h1','winpct_h2','trend']].to_string())
+    rline(half_df.nlargest(5,'trend')[['team','winpct_h1','winpct_h2','trend']].to_markdown())
     rline("Top 5 decliners:")
-    rline(half_df.nsmallest(5,'trend')[['team','winpct_h1','winpct_h2','trend']].to_string())
+    rline(half_df.nsmallest(5,'trend')[['team','winpct_h1','winpct_h2','trend']].to_markdown())
     half_df.to_csv(os.path.join(EDA_DIR, "season_trends.csv"), index=False)
     rline()
 
@@ -258,14 +258,14 @@ def main():
     rline("## 14. Line Matchup Frequency")
     matchup_freq = df.groupby(['home_off_line','away_def_pairing']).size().reset_index(name='count')
     matchup_freq = matchup_freq.sort_values('count', ascending=False)
-    rline(matchup_freq.to_string())
+    rline(matchup_freq.to_markdown())
     matchup_freq.to_csv(os.path.join(EDA_DIR, "matchup_frequency.csv"), index=False)
     rline()
 
     # ── 15. TOI distribution by line type ─────────────
     rline("## 15. TOI by Line Type")
     toi_by_line = df.groupby('home_off_line')['toi'].describe()
-    rline(toi_by_line.to_string())
+    rline(toi_by_line.to_markdown())
     toi_by_line.to_csv(os.path.join(EDA_DIR, "toi_by_line.csv"))
     rline()
 
@@ -286,7 +286,7 @@ def main():
                                   'xgd60': (xgf-xga)/toi_*3600})
     
     team_xg_df = pd.DataFrame(team_xg_list)
-    rline(team_xg_df.sort_values('xgd60', ascending=False).to_string())
+    rline(team_xg_df.sort_values('xgd60', ascending=False).to_markdown())
     team_xg_df.to_csv(os.path.join(EDA_DIR, "team_es_xg_rates.csv"), index=False)
     rline()
 
