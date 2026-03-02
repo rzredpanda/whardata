@@ -464,3 +464,143 @@ random_forest       0.4274        0.6056          0.500       0.2820    0.7952  
 [WIN_PROB] 2026-03-01T15:39:24.544514 | 
 15 matchups with >10pp model disagreement: ['brazil', 'netherlands', 'peru', 'thailand', 'pakistan', 'india', 'iceland', 'china', 'philippines', 'ethiopia', 'singapore', 'guatemala', 'uk', 'vietnam', 'indonesia']
 [WIN_PROB] 2026-03-01T15:39:24.545557 | === Win Probability Agent COMPLETED ===
+[CC_SOS] 2026-03-01T20:03:23.768686 | === CLAUDE CODE MODEL - (Phase 1a: Strength-of-Schedule Adjusted Rating, v1) STARTED ===
+[CC_SOS] 2026-03-01T20:03:23.788645 | Loaded 1312 games, 32 teams
+[CC_SOS] 2026-03-01T20:03:23.907590 |   SOS converged at iteration 9, max_change=7.84e-09
+[CC_SOS] 2026-03-01T20:03:23.917120 | Top 10 SOS-Adjusted Rankings:
+[CC_SOS] 2026-03-01T20:03:23.926706 |  rank        team  sos_rating      sos
+    1      brazil    0.688505 0.474774
+    2 netherlands    0.650051 0.479231
+    3        peru    0.620005 0.480887
+    4    pakistan    0.598572 0.479163
+    5       india    0.592233 0.479592
+    6    thailand    0.584233 0.479150
+    7       china    0.562550 0.483500
+    8     iceland    0.546593 0.486211
+    9      panama    0.541753 0.481932
+   10    ethiopia    0.508605 0.485609
+[CC_SOS] 2026-03-01T20:03:23.934066 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\cc_model_13_sos_adjusted_rating.csv
+[CC_SOS] 2026-03-01T20:03:24.132645 | Validation: tau=0.8589  rho=0.9604  top8=1.000  brier=0.2615  ll=0.7398  acc=0.5831  cons_rho=0.8701
+[CC_SOS] 2026-03-01T20:03:24.133849 | === CLAUDE CODE MODEL - (Phase 1a: Strength-of-Schedule Adjusted Rating, v1) COMPLETED ===
+[CC_DC] 2026-03-01T20:03:30.156260 | === CLAUDE CODE MODEL - (Phase 1a: Dixon-Coles Bivariate Poisson, v1) STARTED ===
+[CC_DC] 2026-03-01T20:03:30.169354 | Loaded 1312 games, 32 teams
+[CC_DC] 2026-03-01T20:03:30.170875 |   Fitting Dixon-Coles via L-BFGS-B...
+[CC_DC] 2026-03-01T20:04:31.519907 |   Home advantage multiplier: 1.1097
+[CC_DC] 2026-03-01T20:04:31.521668 |   Rho (low-score correction): -0.9900
+[CC_DC] 2026-03-01T20:04:31.522939 |   NLL: 4163.96
+[CC_DC] 2026-03-01T20:04:31.527527 | Top 10 Dixon-Coles Rankings:
+[CC_DC] 2026-03-01T20:04:31.534286 |  rank        team  dc_attack  dc_defence  dc_strength
+    1    thailand   1.982992    1.538158     1.289199
+    2      brazil   1.875095    1.522252     1.231790
+    3    pakistan   1.942131    1.607390     1.208251
+    4      mexico   1.833262    1.524661     1.202406
+    5 netherlands   1.654673    1.417037     1.167699
+    6       china   1.769453    1.517857     1.165757
+    7      france   1.810063    1.591614     1.137250
+    8        peru   1.675387    1.481966     1.130516
+    9          uk   1.906473    1.695463     1.124456
+   10      panama   1.807144    1.663611     1.086278
+[CC_DC] 2026-03-01T20:04:31.542640 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\cc_model_14_dixon_coles.csv
+[CC_DC] 2026-03-01T20:04:31.734210 | Validation: tau=0.4476  rho=0.5788  top8=0.750  brier=0.2780  ll=0.7836  acc=0.5648  cons_rho=0.8400
+[CC_DC] 2026-03-01T20:04:31.735451 | === CLAUDE CODE MODEL - (Phase 1a: Dixon-Coles Bivariate Poisson, v1) COMPLETED ===
+[CC_BAYES] 2026-03-01T20:04:37.603617 | === CLAUDE CODE MODEL - (Phase 1a: Ensemble Bayesian Rank Aggregation, v1) STARTED ===
+[CC_BAYES] 2026-03-01T20:04:37.616080 | Loaded 1312 games, 32 teams
+[CC_BAYES] 2026-03-01T20:04:37.619847 |   Loaded model: points
+[CC_BAYES] 2026-03-01T20:04:37.624067 |   Loaded model: xgd60
+[CC_BAYES] 2026-03-01T20:04:37.627424 |   Loaded model: pythagorean
+[CC_BAYES] 2026-03-01T20:04:37.630440 |   Loaded model: elo
+[CC_BAYES] 2026-03-01T20:04:37.633547 |   Loaded model: colley
+[CC_BAYES] 2026-03-01T20:04:37.636572 |   Loaded model: bradley_terry
+[CC_BAYES] 2026-03-01T20:04:37.639938 |   Loaded model: composite
+[CC_BAYES] 2026-03-01T20:04:37.643013 |   Loaded model: logistic
+[CC_BAYES] 2026-03-01T20:04:37.646082 |   Loaded model: random_forest
+[CC_BAYES] 2026-03-01T20:04:37.649072 |   Loaded model: monte_carlo
+[CC_BAYES] 2026-03-01T20:04:37.668882 |   Loaded model: cc_sos
+[CC_BAYES] 2026-03-01T20:04:37.689668 |   Loaded model: cc_dc
+[CC_BAYES] 2026-03-01T20:04:37.690825 | Loaded 12 models for aggregation
+[CC_BAYES] 2026-03-01T20:04:37.691948 |   Model weights: {'points': 1.0, 'xgd60': 1.0, 'pythagorean': 1.0, 'elo': 1.0, 'colley': 1.0, 'bradley_terry': 1.0, 'composite': 1.0, 'logistic': 1.0, 'random_forest': 1.0, 'monte_carlo': 1.0, 'cc_sos': 1.0, 'cc_dc': 1.0}
+[CC_BAYES] 2026-03-01T20:04:37.701181 | Top 10 Bayesian Aggregated Rankings:
+[CC_BAYES] 2026-03-01T20:04:37.707978 |  rank        team  bayesian_mean_rank  posterior_variance
+    1      brazil              3.1667             14.8056
+    2    thailand              3.2500              4.5208
+    3    pakistan              3.7500              2.6875
+    4 netherlands              6.8333             71.9722
+    5       china              8.5000             16.5833
+    6        peru              8.5833             47.5764
+    7      serbia             10.9167             20.2431
+    8          uk             11.0833             39.7431
+    9   guatemala             11.2500              8.1875
+   10      panama             11.3333             16.3889
+[CC_BAYES] 2026-03-01T20:04:37.713843 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\rankings\cc_model_15_bayesian_aggregation.csv
+[CC_BAYES] 2026-03-01T20:04:37.878977 | Validation: tau=0.6895  rho=0.8493  top8=0.750  brier=0.2663  ll=0.7537  acc=0.5785  cons_rho=0.9968
+[CC_BAYES] 2026-03-01T20:04:37.880078 | === CLAUDE CODE MODEL - (Phase 1a: Ensemble Bayesian Rank Aggregation, v1) COMPLETED ===
+[CC_GINI] 2026-03-01T20:04:43.214369 | === CLAUDE CODE MODEL - (Phase 1b: Gini Line Disparity Index, v1) STARTED ===
+[CC_GINI] 2026-03-01T20:04:43.336790 | Loaded 25827 shift rows, 32 teams
+[CC_GINI] 2026-03-01T20:04:44.732847 | Top 10 Teams by Gini Line Disparity (highest = most top-heavy):
+[CC_GINI] 2026-03-01T20:04:44.741062 |  rank         team  gini_raw  gini_adj  disparity_ratio
+    1 saudi_arabia    0.1535    0.2328           1.3628
+    2           uk    0.0766    0.2111           1.1658
+    3  new_zealand    0.1012    0.1905           1.2251
+    4       france    0.1453    0.1871           1.3400
+    5          uae    0.1508    0.1849           1.3552
+    6       canada    0.0053    0.1830           1.0106
+    7         peru    0.0900    0.1819           1.1978
+    8       panama    0.0905    0.1718           1.1990
+    9      iceland    0.1394    0.1655           1.3241
+   10     mongolia    0.0222    0.1611           1.0455
+[CC_GINI] 2026-03-01T20:04:44.748486 | Saved: c:\Users\ryanz\Downloads\whardata\outputs\disparity\cc_method_gini_disparity.csv
+[CC_GINI] 2026-03-01T20:04:44.762562 | Gini disparity rank vs. power rank Spearman rho=-0.0766, p=0.6767
+[CC_GINI] 2026-03-01T20:04:44.764305 |   No significant correlation between disparity and power rank (p >= 0.05)
+[CC_GINI] 2026-03-01T20:04:44.765989 | === CLAUDE CODE MODEL - (Phase 1b: Gini Line Disparity Index, v1) COMPLETED ===
+[VALID] 2026-03-01T20:04:53.676439 | === Validation Agent STARTED ===
+[VALID] 2026-03-01T20:04:53.696912 | Validating model: points
+[VALID] 2026-03-01T20:04:54.334927 |   τ=0.968  ρ=0.996  top8=0.875  acc=0.582  brier=0.2619  ll=0.7408  cons_ρ=0.869
+[VALID] 2026-03-01T20:04:54.338009 | Validating model: xgd60
+[VALID] 2026-03-01T20:04:54.979486 |   τ=0.310  ρ=0.439  top8=0.625  acc=0.546  brier=0.2854  ll=0.8017  cons_ρ=0.741
+[VALID] 2026-03-01T20:04:54.982845 | Validating model: pythagorean
+[VALID] 2026-03-01T20:04:55.630204 |   τ=0.427  ρ=0.562  top8=0.625  acc=0.553  brier=0.2788  ll=0.7859  cons_ρ=0.836
+[VALID] 2026-03-01T20:04:55.633898 | Validating model: elo
+[VALID] 2026-03-01T20:04:56.309409 |   τ=0.665  ρ=0.833  top8=0.875  acc=0.585  brier=0.2659  ll=0.7519  cons_ρ=0.777
+[VALID] 2026-03-01T20:04:56.312616 | Validating model: colley
+[VALID] 2026-03-01T20:04:56.951498 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-03-01T20:04:56.954017 | Validating model: bradley_terry
+[VALID] 2026-03-01T20:04:57.596132 |   τ=0.887  ρ=0.967  top8=1.000  acc=0.594  brier=0.2605  ll=0.7382  cons_ρ=0.886
+[VALID] 2026-03-01T20:04:57.598889 | Validating model: composite
+[VALID] 2026-03-01T20:04:58.214789 |   τ=0.685  ρ=0.856  top8=0.750  acc=0.595  brier=0.2653  ll=0.7537  cons_ρ=0.943
+[VALID] 2026-03-01T20:04:58.218137 | Validating model: logistic
+[VALID] 2026-03-01T20:04:58.848316 |   τ=0.057  ρ=0.078  top8=0.250  acc=0.506  brier=0.3129  ll=0.8765  cons_ρ=0.328
+[VALID] 2026-03-01T20:04:58.851678 | Validating model: random_forest
+[VALID] 2026-03-01T20:04:59.484278 |   τ=0.427  ρ=0.606  top8=0.500  acc=0.562  brier=0.2820  ll=0.7952  cons_ρ=0.809
+[VALID] 2026-03-01T20:04:59.487040 | Validating model: monte_carlo
+[VALID] 2026-03-01T20:05:00.122877 |   τ=0.315  ρ=0.440  top8=0.375  acc=0.538  brier=0.2904  ll=0.8155  cons_ρ=0.758
+[VALID] 2026-03-01T20:05:00.127767 | Validation scores saved: 10 models
+[VALID] 2026-03-01T20:05:00.128707 | Validating win probability model (LR)...
+[VALID] 2026-03-01T20:05:00.787144 |   In-sample accuracy: 0.5846
+[VALID] 2026-03-01T20:05:00.811597 |   10-fold CV accuracy: 0.5823 ± 0.0285
+[VALID] 2026-03-01T20:05:00.812561 |   LOTO accuracy: 0.5739
+[VALID] 2026-03-01T20:05:00.813341 |   Baselines: always_home=0.5640, pts=0.5816, xgd=0.5457
+[VALID] 2026-03-01T20:05:00.820270 | Computing model agreement matrix...
+[VALID] 2026-03-01T20:05:15.827019 | Model agreement matrix saved.
+[VALID] 2026-03-01T20:05:15.827856 | Validating disparity methods...
+[VALID] 2026-03-01T20:05:16.048245 |   Disparity method correlation saved.
+[VALID] 2026-03-01T20:05:16.055504 |   Disparity rank vs points rank Spearman rho=0.0387 p=0.8335
+[VALID] 2026-03-01T20:05:16.056389 | Original Validation 1: Elo Calibration Curve
+[VALID] 2026-03-01T20:05:16.245960 |   Elo ECE (Expected Calibration Error): 0.0840
+[VALID] 2026-03-01T20:05:16.249589 | Original Validation 2: Score CI Overlap for Adjacent Rankings
+[VALID] 2026-03-01T20:05:17.563826 |   Adjacent rank pairs with overlapping CIs: 100.0%
+[VALID] 2026-03-01T20:05:17.567357 | 
+=== All Validation Complete ===
+[VALID] 2026-03-01T20:05:17.574060 | 
+Summary Table:
+[VALID] 2026-03-01T20:05:17.586639 |    model_name  kendall_tau  spearman_rho  top8_hit_rate  brier_score  log_loss  accuracy  consensus_rho
+       points       0.9677        0.9963          0.875       0.2619    0.7408    0.5823         0.8694
+        xgd60       0.3105        0.4388          0.625       0.2854    0.8017    0.5457         0.7412
+  pythagorean       0.4274        0.5616          0.625       0.2788    0.7859    0.5534         0.8356
+          elo       0.6653        0.8325          0.875       0.2659    0.7519    0.5854         0.7775
+       colley       0.8871        0.9666          1.000       0.2605    0.7382    0.5938         0.8859
+bradley_terry       0.8871        0.9666          1.000       0.2605    0.7382    0.5938         0.8859
+    composite       0.6855        0.8563          0.750       0.2653    0.7537    0.5953         0.9431
+     logistic       0.0565        0.0777          0.250       0.3129    0.8765    0.5061         0.3277
+random_forest       0.4274        0.6056          0.500       0.2820    0.7952    0.5625         0.8094
+  monte_carlo       0.3145        0.4402          0.375       0.2904    0.8155    0.5381         0.7580
+[VALID] 2026-03-01T20:05:17.587483 | === Validation Agent COMPLETED ===
