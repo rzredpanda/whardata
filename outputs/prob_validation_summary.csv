@@ -1,0 +1,6 @@
+validation_method,accuracy,brier,log_loss,roc_auc,ECE
+10-fold CV (LR),0.6075 ± 0.0225,0.2335 ± 0.0055,0.6591 ± 0.0123,0.6277 ± 0.0255,
+LOTO (LR),0.6082 ± 0.0524,0.2336 ± 0.0134,0.6592 ± 0.0283,N/A,
+10-fold CV (GB),0.5899 ± 0.0275,0.2426 ± 0.0058,0.6803 ± 0.0138,0.6000 ± 0.0224,
+Calibration ECE,N/A,N/A,N/A,N/A,0.0288
+Baselines,home=0.5640 | pts=0.5816 | xgd=0.5457,N/A,N/A,N/A,

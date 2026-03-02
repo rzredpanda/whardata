@@ -1,0 +1,17 @@
+game,home_team,away_team,p_ensemble,boot_ci_lo,boot_ci_hi,boot_width
+1,brazil,kazakhstan,0.7266,0.6255,0.7017,0.0762
+2,netherlands,mongolia,0.7206,0.6133,0.6896,0.0762
+3,peru,rwanda,0.6346,0.5216,0.6008,0.0793
+4,thailand,oman,0.6671,0.5592,0.6384,0.0793
+5,pakistan,germany,0.6493,0.5716,0.6418,0.0702
+6,india,usa,0.6116,0.5618,0.6351,0.0732
+7,panama,switzerland,0.6077,0.5478,0.6301,0.0823
+8,iceland,canada,0.5813,0.5345,0.6169,0.0824
+9,china,france,0.605,0.5403,0.6135,0.0732
+10,philippines,morocco,0.544,0.5464,0.6196,0.0732
+11,ethiopia,saudi_arabia,0.5835,0.5478,0.621,0.0732
+12,singapore,new_zealand,0.5286,0.5051,0.5814,0.0764
+13,guatemala,south_korea,0.5676,0.5247,0.5978,0.0732
+14,uk,mexico,0.5075,0.5037,0.583,0.0793
+15,vietnam,serbia,0.507,0.4974,0.5736,0.0762
+16,indonesia,uae,0.5667,0.5059,0.5821,0.0762
