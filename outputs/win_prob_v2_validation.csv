@@ -1,0 +1,11 @@
+model,accuracy,brier,log_loss,roc_auc
+LR (calibrated),0.6113,0.2309,0.6544,0.6384
+Random Forest (calibrated),0.6349,0.2176,0.6242,0.7033
+Gradient Boosting (calibrated),0.625,0.225,0.6421,0.7724
+Ridge Classifier (calibrated),0.6052,0.2325,0.657,0.6341
+Elo,0.596,0.2346,0.6615,0.6213
+BT,0.6021,0.2323,0.6566,0.6345
+Log5,0.5861,0.2396,0.6719,0.5914
+MC Poisson,0.5816,0.2421,0.6781,0.5918
+Poisson Direct,0.5808,0.2418,0.6771,0.5918
+xGD Power,0.5755,0.2436,0.6807,0.5776
