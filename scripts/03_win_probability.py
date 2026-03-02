@@ -8,6 +8,8 @@ import numpy as np
 from scipy import optimize, stats
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
 from sklearn.calibration import CalibratedClassifierCV
 import warnings
 warnings.filterwarnings('ignore')
@@ -104,6 +106,16 @@ def main():
         home_wins = (h_goals > a_goals).sum() + 0.5*(h_goals==a_goals).sum()
         return home_wins / n
 
+    # ── Method 6: Random Forest ────────────────────────
+    log("Method 6: Random Forest")
+    rf = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42)
+    rf.fit(X_s, y)
+    
+    # ── Method 7: Support Vector Machine ───────────────
+    log("Method 7: Support Vector Machine (RBF)")
+    svm = SVC(kernel='rbf', probability=True, random_state=42)
+    svm.fit(X_s, y)
+
     # ── Compute probabilities for all 16 matchups ─────
     results = []
     for _, row in matchups.iterrows():
@@ -146,8 +158,16 @@ def main():
         # Method 5: Monte Carlo
         p_mc = mc_prob(ht, at)
         
+        # Method 6 & 7: RF and SVM
+        if ht in ts.index and at in ts.index:
+            p_rf = rf.predict_proba(x_qs)[0][1]
+            p_svm = svm.predict_proba(x_qs)[0][1]
+        else:
+            p_rf = 0.5
+            p_svm = 0.5
+        
         # Ensemble
-        probs = [p_lr, p_elo, p_bt, p_log5, p_mc]
+        probs = [p_lr, p_elo, p_bt, p_log5, p_mc, p_rf, p_svm]
         p_ensemble = np.mean(probs)
         disagreement = max(probs) - min(probs)
         
@@ -155,7 +175,8 @@ def main():
             'game': row['game'], 'home_team': ht, 'away_team': at,
             'p_lr': round(p_lr,4), 'p_elo': round(p_elo,4),
             'p_bt': round(p_bt,4), 'p_log5': round(p_log5,4),
-            'p_mc': round(p_mc,4), 'p_ensemble': round(p_ensemble,4),
+            'p_mc': round(p_mc,4), 'p_rf': round(p_rf,4), 'p_svm': round(p_svm,4),
+            'p_ensemble': round(p_ensemble,4),
             'disagreement': round(disagreement,4),
             'flag_disagree': 'YES' if disagreement > 0.10 else ''
         })
@@ -170,7 +191,7 @@ def main():
     for _, r in results_df.iterrows():
         log(f"  Game {r['game']:2d}: {r['home_team']:15s} vs {r['away_team']:15s} | "
             f"LR={r['p_lr']:.3f} Elo={r['p_elo']:.3f} BT={r['p_bt']:.3f} "
-            f"Log5={r['p_log5']:.3f} MC={r['p_mc']:.3f} | Ens={r['p_ensemble']:.3f} "
+            f"Log5={r['p_log5']:.3f} MC={r['p_mc']:.3f} RF={r['p_rf']:.3f} SVM={r['p_svm']:.3f} | Ens={r['p_ensemble']:.3f} "
             f"{'⚠️ DISAGREE' if r['flag_disagree'] else ''}")
     
     flagged = results_df[results_df['flag_disagree']=='YES']

@@ -416,3 +416,51 @@ random_forest       0.4274        0.6056          0.500       0.2820    0.7952  
 [REPORT2] 2026-02-28T16:42:05.136343 | === Report 2 Agent STARTED ===
 [REPORT2] 2026-02-28T16:42:05.180983 | Report 2 generated at: c:\Users\ryanz\Downloads\whardata\outputs\reports\Report_2_ML_Refinement.md
 [REPORT2] 2026-02-28T16:42:05.182168 | === Report 2 Agent COMPLETED ===
+[WIN_PROB] 2026-03-01T15:39:22.931345 | === Win Probability Agent STARTED ===
+[WIN_PROB] 2026-03-01T15:39:23.008829 | Games: 1312, Teams: 32, Matchups: 16
+[WIN_PROB] 2026-03-01T15:39:23.268970 | Method 1: Logistic Regression
+[WIN_PROB] 2026-03-01T15:39:23.299276 |   In-sample accuracy: 0.5846
+[WIN_PROB] 2026-03-01T15:39:23.300544 | Method 2: Elo-based Probability
+[WIN_PROB] 2026-03-01T15:39:23.322124 | Method 3: Bradley-Terry Probability
+[WIN_PROB] 2026-03-01T15:39:23.342684 | Method 4: Pythagorean Log5
+[WIN_PROB] 2026-03-01T15:39:23.364029 | Method 5: Monte Carlo Matchup Simulation
+[WIN_PROB] 2026-03-01T15:39:23.485950 | Method 6: Random Forest
+[WIN_PROB] 2026-03-01T15:39:23.793215 | Method 7: Support Vector Machine (RBF)
+[WIN_PROB] 2026-03-01T15:39:24.302361 |   Matchup 1: brazil vs kazakhstan
+[WIN_PROB] 2026-03-01T15:39:24.322676 |   Matchup 2: netherlands vs mongolia
+[WIN_PROB] 2026-03-01T15:39:24.335290 |   Matchup 3: peru vs rwanda
+[WIN_PROB] 2026-03-01T15:39:24.345773 |   Matchup 4: thailand vs oman
+[WIN_PROB] 2026-03-01T15:39:24.357421 |   Matchup 5: pakistan vs germany
+[WIN_PROB] 2026-03-01T15:39:24.370505 |   Matchup 6: india vs usa
+[WIN_PROB] 2026-03-01T15:39:24.384895 |   Matchup 7: panama vs switzerland
+[WIN_PROB] 2026-03-01T15:39:24.399475 |   Matchup 8: iceland vs canada
+[WIN_PROB] 2026-03-01T15:39:24.410405 |   Matchup 9: china vs france
+[WIN_PROB] 2026-03-01T15:39:24.423169 |   Matchup 10: philippines vs morocco
+[WIN_PROB] 2026-03-01T15:39:24.439994 |   Matchup 11: ethiopia vs saudi_arabia
+[WIN_PROB] 2026-03-01T15:39:24.457056 |   Matchup 12: singapore vs new_zealand
+[WIN_PROB] 2026-03-01T15:39:24.468406 |   Matchup 13: guatemala vs south_korea
+[WIN_PROB] 2026-03-01T15:39:24.479269 |   Matchup 14: uk vs mexico
+[WIN_PROB] 2026-03-01T15:39:24.492005 |   Matchup 15: vietnam vs serbia
+[WIN_PROB] 2026-03-01T15:39:24.505041 |   Matchup 16: indonesia vs uae
+[WIN_PROB] 2026-03-01T15:39:24.525161 | Win probabilities saved: c:\Users\ryanz\Downloads\whardata\outputs\win_probabilities.csv
+[WIN_PROB] 2026-03-01T15:39:24.526038 | 
+=== Win Probability Summary ===
+[WIN_PROB] 2026-03-01T15:39:24.527561 |   Game  1: brazil          vs kazakhstan      | LR=0.708 Elo=0.852 BT=0.822 Log5=0.612 MC=0.620 RF=0.861 SVM=0.611 | Ens=0.727 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.528601 |   Game  2: netherlands     vs mongolia        | LR=0.704 Elo=0.847 BT=0.811 Log5=0.693 MC=0.612 RF=0.764 SVM=0.614 | Ens=0.721 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.529464 |   Game  3: peru            vs rwanda          | LR=0.588 Elo=0.818 BT=0.766 Log5=0.598 MC=0.540 RF=0.582 SVM=0.550 | Ens=0.635 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.530376 |   Game  4: thailand        vs oman            | LR=0.658 Elo=0.782 BT=0.694 Log5=0.651 MC=0.591 RF=0.690 SVM=0.604 | Ens=0.667 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.531552 |   Game  5: pakistan        vs germany         | LR=0.700 Elo=0.756 BT=0.677 Log5=0.594 MC=0.582 RF=0.633 SVM=0.603 | Ens=0.649 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.532642 |   Game  6: india           vs usa             | LR=0.596 Elo=0.766 BT=0.688 Log5=0.551 MC=0.487 RF=0.589 SVM=0.605 | Ens=0.612 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.533719 |   Game  7: panama          vs switzerland     | LR=0.561 Elo=0.638 BT=0.642 Log5=0.578 MC=0.601 RF=0.635 SVM=0.597 | Ens=0.608 
+[WIN_PROB] 2026-03-01T15:39:24.534607 |   Game  8: iceland         vs canada          | LR=0.559 Elo=0.758 BT=0.645 Log5=0.459 MC=0.475 RF=0.571 SVM=0.601 | Ens=0.581 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.535636 |   Game  9: china           vs france          | LR=0.639 Elo=0.780 BT=0.648 Log5=0.506 MC=0.478 RF=0.593 SVM=0.589 | Ens=0.605 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.536571 |   Game 10: philippines     vs morocco         | LR=0.511 Elo=0.653 BT=0.605 Log5=0.454 MC=0.428 RF=0.577 SVM=0.580 | Ens=0.544 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.537497 |   Game 11: ethiopia        vs saudi_arabia    | LR=0.552 Elo=0.726 BT=0.578 Log5=0.485 MC=0.543 RF=0.594 SVM=0.606 | Ens=0.584 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.538401 |   Game 12: singapore       vs new_zealand     | LR=0.490 Elo=0.546 BT=0.526 Log5=0.438 MC=0.528 RF=0.586 SVM=0.587 | Ens=0.529 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.539353 |   Game 13: guatemala       vs south_korea     | LR=0.559 Elo=0.682 BT=0.567 Log5=0.522 MC=0.491 RF=0.567 SVM=0.585 | Ens=0.568 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.540299 |   Game 14: uk              vs mexico          | LR=0.486 Elo=0.651 BT=0.543 Log5=0.489 MC=0.522 RF=0.437 SVM=0.424 | Ens=0.507 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.541217 |   Game 15: vietnam         vs serbia          | LR=0.525 Elo=0.567 BT=0.508 Log5=0.413 MC=0.400 RF=0.563 SVM=0.574 | Ens=0.507 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.542181 |   Game 16: indonesia       vs uae             | LR=0.524 Elo=0.684 BT=0.575 Log5=0.514 MC=0.510 RF=0.602 SVM=0.559 | Ens=0.567 ⚠️ DISAGREE
+[WIN_PROB] 2026-03-01T15:39:24.544514 | 
+15 matchups with >10pp model disagreement: ['brazil', 'netherlands', 'peru', 'thailand', 'pakistan', 'india', 'iceland', 'china', 'philippines', 'ethiopia', 'singapore', 'guatemala', 'uk', 'vietnam', 'indonesia']
+[WIN_PROB] 2026-03-01T15:39:24.545557 | === Win Probability Agent COMPLETED ===
